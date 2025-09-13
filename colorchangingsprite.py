@@ -3,7 +3,7 @@ import pygame
 def main():
     pygame.init()
     screen_width, screen_height = 500, 500
-    screen = pygame.display.set_mode(screen_width, screen_height)
+    screen = pygame.display.set_mode((screen_width, screen_height))
 
     # mapping of color names to RGB values
     colors = {
@@ -37,7 +37,7 @@ def main():
         
         # change color based on boundary contact
         if x == 0: current_color = colors['blue']
-        elif x == 0: screen_width - sprite_width: current_color = colors['yellow']
+        elif x == screen_width - sprite_width: current_color = colors['yellow']
         elif y == 0: current_color = colors['red']
         elif y == screen_height - sprite_height:
             current_color = colors['green']
@@ -51,5 +51,5 @@ def main():
         clock.tick(90)
 
     pygame.quit()
-if __name__ == "main":
+if __name__ == "__main__":
     main()        
